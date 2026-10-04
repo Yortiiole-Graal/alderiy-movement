@@ -1,4 +1,5 @@
 extends Area2D
+@export_file("*.tscn") var room: String
 
 
 
@@ -10,4 +11,4 @@ func _ready() -> void:
 func _on_body_entered(body: Node2D) -> void:
 	print(body)
 	if body.name == 'Alderiy':
-		get_tree().call_deferred('change_scene_to_file', 'res://room_2.tscn')
+		get_tree().call_deferred('change_scene_to_file', room)

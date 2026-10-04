@@ -1,13 +1,10 @@
 [gd_scene format=3 uid="uid://163mvxaxicae"]
 
 [ext_resource type="PackedScene" uid="uid://cmcmhn7n1x5rk" path="res://alderiy.tscn" id="1_88gup"]
-[ext_resource type="Script" uid="uid://bgm8bea81md4j" path="res://door.gd" id="2_bisa2"]
+[ext_resource type="PackedScene" uid="uid://bnbnacbq6dli6" path="res://door.tscn" id="2_bisa2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wfwix"]
 size = Vector2(735, 18)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_suiag"]
-size = Vector2(40.9834, 42.98843)
 
 [node name="Room" type="Node2D" unique_id=694796652]
 
@@ -94,24 +91,8 @@ position = Vector2(368, 9.5)
 shape = SubResource("RectangleShape2D_wfwix")
 
 [node name="Alderiy" parent="." unique_id=440532179 instance=ExtResource("1_88gup")]
-position = Vector2(536, 232)
+position = Vector2(865, 327)
 
-[node name="Door" type="Area2D" parent="." unique_id=1977810447]
+[node name="Door" parent="." unique_id=508498021 instance=ExtResource("2_bisa2")]
 position = Vector2(930, 279)
-scale = Vector2(0.81145096, 0.9843538)
-script = ExtResource("2_bisa2")
-
-[node name="ColorRect" type="ColorRect" parent="Door" unique_id=260642278]
-offset_left = 2.0000002
-offset_top = -2.0
-offset_right = 42.0
-offset_bottom = 38.0
-scale = Vector2(0.244, 3.65)
-color = Color(0.32963216, 0.5230719, 0.47458065, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Door" unique_id=1712747163]
-position = Vector2(7, 71.5)
-scale = Vector2(0.244, 3.373)
-shape = SubResource("RectangleShape2D_suiag")
-
-[connection signal="body_entered" from="Door" to="Door" method="_on_body_entered"]
+room = "uid://5hc454850nuj"

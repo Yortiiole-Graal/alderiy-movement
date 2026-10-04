@@ -1,12 +1,10 @@
 [gd_scene format=3 uid="uid://5hc454850nuj"]
 
 [ext_resource type="PackedScene" uid="uid://cmcmhn7n1x5rk" path="res://alderiy.tscn" id="1_wjifb"]
+[ext_resource type="PackedScene" uid="uid://bnbnacbq6dli6" path="res://door.tscn" id="2_7hp4u"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wfwix"]
 size = Vector2(735, 18.340393)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_suiag"]
-size = Vector2(40.9834, 42.98843)
 
 [node name="Room" type="Node2D" unique_id=694796652]
 
@@ -51,7 +49,7 @@ shape = SubResource("RectangleShape2D_wfwix")
 [node name="left" type="StaticBody2D" parent="." unique_id=1556285889]
 position = Vector2(205.99998, 38)
 rotation = 1.5637659
-scale = Vector2(0.6234471, 1.0341449)
+scale = Vector2(0.3312823, 0.9227745)
 
 [node name="ColorRect" type="ColorRect" parent="left" unique_id=2123965055]
 offset_right = 735.0
@@ -63,9 +61,9 @@ position = Vector2(368, 9.5)
 shape = SubResource("RectangleShape2D_wfwix")
 
 [node name="right" type="StaticBody2D" parent="." unique_id=605445738]
-position = Vector2(929.0001, 277.00003)
+position = Vector2(928.9999, 497)
 rotation = -1.5770705
-scale = Vector2(0.30758026, 0.8008008)
+scale = Vector2(0.59414005, 0.77383256)
 
 [node name="ColorRect" type="ColorRect" parent="right" unique_id=1560444795]
 offset_left = -3.0517578e-05
@@ -77,38 +75,26 @@ color = Color(0.21230483, 0.21230483, 0.21230483, 1)
 position = Vector2(368, 9.5)
 shape = SubResource("RectangleShape2D_wfwix")
 
-[node name="right2" type="StaticBody2D" parent="." unique_id=1574028425]
-position = Vector2(928, 497.00006)
+[node name="left2" type="StaticBody2D" parent="." unique_id=1574028425]
+position = Vector2(189.00006, 503.00003)
 rotation = -1.5770705
 scale = Vector2(0.1028539, 0.87272704)
 
-[node name="ColorRect" type="ColorRect" parent="right2" unique_id=662060041]
+[node name="ColorRect" type="ColorRect" parent="left2" unique_id=662060041]
 offset_left = -3.0517578e-05
 offset_right = 735.0
 offset_bottom = 18.0
 color = Color(0.21230483, 0.21230483, 0.21230483, 1)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="right2" unique_id=1764454856]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left2" unique_id=1764454856]
 position = Vector2(368.0005, 9.435791)
 scale = Vector2(0.99999976, 1)
 shape = SubResource("RectangleShape2D_wfwix")
 
 [node name="Alderiy" parent="." unique_id=440532179 instance=ExtResource("1_wjifb")]
-position = Vector2(536, 232)
+position = Vector2(208, 328)
 
-[node name="Door" type="Area2D" parent="." unique_id=1977810447]
-position = Vector2(930.00006, 279)
-scale = Vector2(0.8744623, 0.98331434)
-
-[node name="ColorRect" type="ColorRect" parent="Door" unique_id=260642278]
-offset_left = 2.0000002
-offset_top = -2.0
-offset_right = 42.0
-offset_bottom = 38.0
-scale = Vector2(0.244, 3.65)
-color = Color(0.32963216, 0.5230719, 0.47458065, 1)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Door" unique_id=1712747163]
-position = Vector2(7, 71.5)
-scale = Vector2(0.244, 3.373)
-shape = SubResource("RectangleShape2D_suiag")
+[node name="Door2" parent="." unique_id=508498021 instance=ExtResource("2_7hp4u")]
+position = Vector2(194, 284.99997)
+scale = Vector2(0.66078645, 0.97251046)
+room = "uid://163mvxaxicae"
