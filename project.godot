@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="alderiy_movement"
-run/main_scene="uid://cmcmhn7n1x5rk"
+run/main_scene="uid://163mvxaxicae"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 

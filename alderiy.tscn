@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://dfhpmxgyc7jsj" path="res://alderiy.gd" id="1_uwx1h"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uwx1h"]
-size = Vector2(64.75, 65.25)
+size = Vector2(65, 65)
 
 [node name="Alderiy" type="CharacterBody2D" unique_id=440532179]
 motion_mode = 1
@@ -17,5 +17,5 @@ offset_bottom = 64.0
 color = Color(0.6431373, 1, 0.8117647, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2056219773]
-position = Vector2(31.625, 31.375)
+position = Vector2(31.5, 31.5)
 shape = SubResource("RectangleShape2D_uwx1h")

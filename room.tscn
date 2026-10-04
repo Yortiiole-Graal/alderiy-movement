@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://163mvxaxicae"]
+
+[ext_resource type="PackedScene" uid="uid://cmcmhn7n1x5rk" path="res://alderiy.tscn" id="1_88gup"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wfwix"]
+size = Vector2(735, 18)
+
+[node name="Room" type="Node2D" unique_id=694796652]
+
+[node name="up" type="StaticBody2D" parent="." unique_id=467080989]
+position = Vector2(206, 40)
+
+[node name="ColorRect" type="ColorRect" parent="up" unique_id=399974289]
+offset_right = 735.0
+offset_bottom = 18.0
+color = Color(0.21230483, 0.21230483, 0.21230483, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="up" unique_id=2024640312]
+position = Vector2(368, 9.5)
+shape = SubResource("RectangleShape2D_wfwix")
+
+[node name="down" type="StaticBody2D" parent="." unique_id=210101523]
+position = Vector2(193, 479)
+
+[node name="ColorRect" type="ColorRect" parent="down" unique_id=1530185268]
+offset_right = 735.0
+offset_bottom = 18.0
+color = Color(0.21230483, 0.21230483, 0.21230483, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="down" unique_id=2054968985]
+position = Vector2(367.5, 9)
+shape = SubResource("RectangleShape2D_wfwix")
+
+[node name="centr" type="StaticBody2D" parent="." unique_id=843457576]
+position = Vector2(305.99997, 232)
+rotation = 0.31617308
+scale = Vector2(0.50877196, 1.3392856)
+
+[node name="ColorRect" type="ColorRect" parent="centr" unique_id=767745990]
+offset_right = 735.0
+offset_bottom = 18.0
+color = Color(0.21230483, 0.21230483, 0.21230483, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="centr" unique_id=311245513]
+position = Vector2(367.5, 9)
+shape = SubResource("RectangleShape2D_wfwix")
+
+[node name="left" type="StaticBody2D" parent="." unique_id=1556285889]
+position = Vector2(208.00003, -86.00001)
+rotation = 1.5637659
+
+[node name="ColorRect" type="ColorRect" parent="left" unique_id=2123965055]
+offset_right = 735.0
+offset_bottom = 18.0
+color = Color(0.21230483, 0.21230483, 0.21230483, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="left" unique_id=872839316]
+position = Vector2(368, 9.5)
+shape = SubResource("RectangleShape2D_wfwix")
+
+[node name="right" type="StaticBody2D" parent="." unique_id=605445738]
+position = Vector2(916, 570)
+rotation = -1.5770705
+
+[node name="ColorRect" type="ColorRect" parent="right" unique_id=1560444795]
+offset_left = -3.0517578e-05
+offset_right = 735.0
+offset_bottom = 18.0
+color = Color(0.21230483, 0.21230483, 0.21230483, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right" unique_id=261492993]
+position = Vector2(368, 9.5)
+shape = SubResource("RectangleShape2D_wfwix")
+
+[node name="Alderiy" parent="." unique_id=440532179 instance=ExtResource("1_88gup")]
+position = Vector2(536, 232)
