@@ -1,4 +1,4 @@
-extends Node2D
+extends CharacterBody2D
 var speed: int = 70
 
 
@@ -8,12 +8,15 @@ func _ready() -> void:
 
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
+	velocity.x = 0
+	velocity.y = 0
 	if Input.is_action_pressed("ui_up"):
-		position.y -= speed * delta
+		velocity.y -= speed
 	if Input.is_action_pressed("ui_down"):
-		position.y += speed * delta
+		velocity.y += speed
 	if Input.is_action_pressed("ui_right"):
-		position.x += speed * delta
+		velocity.x += speed
 	if Input.is_action_pressed("ui_left"):
-		position.x -= speed * delta
+		velocity.x -= speed
+	move_and_slide()
