@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cmcmhn7n1x5rk"]
+
+[ext_resource type="Script" uid="uid://dfhpmxgyc7jsj" path="res://alderiy.gd" id="1_uwx1h"]
+
+[node name="Alderiy" type="Node2D" unique_id=1044918507]
+position = Vector2(500, 300)
+script = ExtResource("1_uwx1h")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=263677172]
+offset_right = 64.0
+offset_bottom = 64.0
+color = Color(0.6431373, 1, 0.8117647, 1)
