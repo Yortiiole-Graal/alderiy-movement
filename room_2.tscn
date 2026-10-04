@@ -1,10 +1,9 @@
-[gd_scene format=3 uid="uid://163mvxaxicae"]
+[gd_scene format=3 uid="uid://5hc454850nuj"]
 
-[ext_resource type="PackedScene" uid="uid://cmcmhn7n1x5rk" path="res://alderiy.tscn" id="1_88gup"]
-[ext_resource type="Script" uid="uid://bgm8bea81md4j" path="res://door.gd" id="2_bisa2"]
+[ext_resource type="PackedScene" uid="uid://cmcmhn7n1x5rk" path="res://alderiy.tscn" id="1_wjifb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wfwix"]
-size = Vector2(735, 18)
+size = Vector2(735, 18.340393)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_suiag"]
 size = Vector2(40.9834, 42.98843)
@@ -36,9 +35,9 @@ position = Vector2(367.5, 9)
 shape = SubResource("RectangleShape2D_wfwix")
 
 [node name="centr" type="StaticBody2D" parent="." unique_id=843457576]
-position = Vector2(667, 73)
+position = Vector2(305.99997, 232)
 rotation = 0.31617308
-scale = Vector2(0.22403933, 7.061254)
+scale = Vector2(0.50877196, 1.3392856)
 
 [node name="ColorRect" type="ColorRect" parent="centr" unique_id=767745990]
 offset_right = 735.0
@@ -79,7 +78,7 @@ position = Vector2(368, 9.5)
 shape = SubResource("RectangleShape2D_wfwix")
 
 [node name="right2" type="StaticBody2D" parent="." unique_id=1574028425]
-position = Vector2(926.99994, 497.00003)
+position = Vector2(928, 497.00006)
 rotation = -1.5770705
 scale = Vector2(0.1028539, 0.87272704)
 
@@ -90,16 +89,16 @@ offset_bottom = 18.0
 color = Color(0.21230483, 0.21230483, 0.21230483, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="right2" unique_id=1764454856]
-position = Vector2(368, 9.5)
+position = Vector2(368.0005, 9.435791)
+scale = Vector2(0.99999976, 1)
 shape = SubResource("RectangleShape2D_wfwix")
 
-[node name="Alderiy" parent="." unique_id=440532179 instance=ExtResource("1_88gup")]
+[node name="Alderiy" parent="." unique_id=440532179 instance=ExtResource("1_wjifb")]
 position = Vector2(536, 232)
 
 [node name="Door" type="Area2D" parent="." unique_id=1977810447]
-position = Vector2(930, 279)
-scale = Vector2(0.81145096, 0.9843538)
-script = ExtResource("2_bisa2")
+position = Vector2(930.00006, 279)
+scale = Vector2(0.8744623, 0.98331434)
 
 [node name="ColorRect" type="ColorRect" parent="Door" unique_id=260642278]
 offset_left = 2.0000002
@@ -113,5 +112,3 @@ color = Color(0.32963216, 0.5230719, 0.47458065, 1)
 position = Vector2(7, 71.5)
 scale = Vector2(0.244, 3.373)
 shape = SubResource("RectangleShape2D_suiag")
-
-[connection signal="body_entered" from="Door" to="Door" method="_on_body_entered"]
